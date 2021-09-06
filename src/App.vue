@@ -2,7 +2,9 @@
 </script>
 
 <template>
-  <div>hello word</div>
+  <div>
+    <h1>hello word</h1>
+  </div>
 </template>
 
 <style>
