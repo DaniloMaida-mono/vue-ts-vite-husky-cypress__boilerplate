@@ -129,3 +129,5 @@ storybook-static
 # Local Netlify folder
 
 .netlify
+
+cypress/
