@@ -1,0 +1,26 @@
+{
+  "name": "foodys",
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc --noEmit && vite build",
+    "serve": "vite preview"
+  },
+  "dependencies": {
+    "vue": "^3.2.6",
+    "vuex": "^4.0.2"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^13.1.0",
+    "@commitlint/config-conventional": "^13.1.0",
+    "@vitejs/plugin-vue": "^1.6.0",
+    "@vue/compiler-sfc": "^3.2.6",
+    "eslint": "^7.32.0",
+    "eslint-plugin-vue": "^7.17.0",
+    "husky": "^7.0.2",
+    "prettier": "2.3.2",
+    "typescript": "^4.3.2",
+    "vite": "^2.5.2",
+    "vue-tsc": "^0.2.2"
+  }
+}
