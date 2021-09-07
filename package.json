@@ -25,6 +25,7 @@
     "element-ui": "^2.15.6",
     "husky": "^7.0.2",
     "vue": "^3.2.6",
+    "vue-router": "^4.0.11",
     "vuex": "^4.0.2"
   },
   "devDependencies": {
