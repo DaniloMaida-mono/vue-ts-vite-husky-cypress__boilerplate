@@ -2,12 +2,10 @@
 </script>
 
 <template>
-  <div>
-    <h1>hello word</h1>
-  </div>
+  <h1 class="sss">hello word</h1>
 </template>
 
-<style>
+<style lang="scss">
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -15,5 +13,9 @@
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+
+  div {
+    height: 30px;
+  }
 }
 </style>

@@ -1,7 +1,6 @@
-describe('Main', () => {
-    it('should display hello world', () => {
+describe('Test', () => {
+    it('should find app', () => {
       cy.visit('/')
-
-      cy.contains('#app')
+      cy.get('#app')
     })
   })
