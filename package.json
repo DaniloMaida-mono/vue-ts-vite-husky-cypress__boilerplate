@@ -11,11 +11,6 @@
     "lint:style": "stylelint src/**/*.{css,scss,vue}",
     "lint": "npm run lint:script && npm run lint:style"
   },
-  "husky": {
-    "hooks": {
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
-    }
-  },
   "lint-staged": {
     "*.{ts,vue}": "eslint --fix",
     "*.{css,scss,vue}": "stylelint --fix",
@@ -23,7 +18,6 @@
   },
   "dependencies": {
     "element-ui": "^2.15.6",
-    "husky": "^7.0.2",
     "vue": "^3.2.6",
     "vue-router": "^4.0.11",
     "vuex": "^4.0.2"
@@ -39,10 +33,8 @@
     "eslint-plugin-vue": "^7.17.0",
     "husky": "^7.0.0",
     "lint-staged": "^11.1.2",
-    "node-sass": "^6.0.1",
     "prettier": "2.3.2",
     "sass": "^1.39.0",
-    "sass-loader": "^12.1.0",
     "start-server-and-test": "^1.14.0",
     "stylelint": "^13.13.1",
     "stylelint-config-prettier": "^8.0.2",
