@@ -2,7 +2,11 @@ module.exports = {
   env: {
     node: true,
   },
-  extends: ['eslint:recommended', 'plugin:vue/vue3-recommended'],
+  extends: [
+    'eslint:recommended',
+    'plugin:vue/vue3-recommended',
+    'plugin:prettier/recommended',
+  ],
   rules: {
     'vetur.validation.template': 0,
     'vue/require-default-prop': 'off',
