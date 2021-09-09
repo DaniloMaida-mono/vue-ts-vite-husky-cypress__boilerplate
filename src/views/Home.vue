@@ -1,16 +1,31 @@
 <template>
   <Title text="Home" />
-  <div>
-    <Button text="Pimary Button" :icon="SearchOutlined" /> <br />
+  <div class="init">
+    <Button
+      text="Pimary Button"
+      :icon="SearchOutlined"
+      @onClick="clickButton"
+    />
+    <br />
+    <Button text="Default Button" type="default" /> <br />
     <Button text="Secondary Button" :isSecondary="true" /> <br />
     <Button :icon="SearchOutlined" /> <br />
-    <Dropdown
-      text="Dropdown"
-      :items="[
-        { label: 'item1', value: 'value1' },
-        { label: 'item2', value: 'value2' },
-      ]"
-    />
+
+    <TextInput placeHolder="Placeholder" id="address" label="Indirizzo" />
+    <div class="select">
+      <SelectInput
+        @onChange="handleSelectChange"
+        :options="[
+          { label: 'Test', value: 'test' },
+          { label: 'Test2', value: 'test2' },
+        ]"
+        defaultValue="test"
+        label="Seleziona"
+      />
+    </div>
+
+    <Datepicker label="Scegli una data" @onChange="handleDateChange" />
+    <Timepicker label="Scegli un orario" @onChange="handleTimeChange" />
   </div>
 </template>
 
@@ -20,14 +35,49 @@ import { SearchOutlined } from '@ant-design/icons-vue'
 import Title from '@/components/Title.vue'
 import Button from '@/components/Button.vue'
 import Dropdown from '@/components/Dropdown.vue'
+import TextInput from '@/components/TextInput.vue'
+import SelectInput from '@/components/SelectInput.vue'
+import Datepicker from '@/components/Datepicker.vue'
+import Timepicker from '@/components/Timepicker.vue'
 
 export default defineComponent({
   name: 'Home',
-  components: { Title, Button, SearchOutlined, Dropdown },
+  components: {
+    Title,
+    Button,
+    SearchOutlined,
+    TextInput,
+    Dropdown,
+    SelectInput,
+    Datepicker,
+    Timepicker,
+  },
   setup() {
-    console.log(typeof SearchOutlined)
+    const clickButton = (args: object) => {
+      console.log(args)
+    }
+    const handleSelectChange = (args: object) => {
+      console.log(args)
+    }
+    const handleDropDownChange = (args: object) => {
+      console.log(args)
+    }
+
+    const handleDateChange = (args: object) => {
+      console.log(args)
+    }
+
+    const handleTimeChange = (args: object) => {
+      console.log(args)
+    }
+
     return {
       SearchOutlined,
+      clickButton,
+      handleSelectChange,
+      handleDropDownChange,
+      handleDateChange,
+      handleTimeChange,
     }
   },
 })
@@ -39,10 +89,12 @@ h1 {
   text-align: center;
 }
 
-div {
+div.init {
+  height: 70vh;
   width: fit-content;
   margin: auto;
   display: flex;
+  justify-content: space-around;
   flex-direction: column;
 }
 </style>

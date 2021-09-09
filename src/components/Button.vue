@@ -1,9 +1,10 @@
 <template>
   <a-button
-    :class="[isSecondary ? 'secondary-button' : '']"
+    :class="[isSecondary ? 'secondary-button' : 'primary-button']"
     :type="type"
     :size="size"
     :block="block"
+    @click="handleClick"
   >
     <template v-if="icon" #icon><component :is="icon" /></template>
     {{ text }}
@@ -40,7 +41,15 @@ export default defineComponent({
       type: Boolean as PropType<boolean>,
     },
   },
-  setup() {},
+  setup(props, { emit }) {
+    const handleClick = (e: Event) => {
+      emit('onClick', { event: e })
+    }
+
+    return {
+      handleClick,
+    }
+  },
 })
 </script>
 
@@ -48,6 +57,8 @@ export default defineComponent({
 <style lang="less">
 @import '@/assets/style/ant-variables';
 
+.primary {
+}
 .secondary-button {
   background: @secondary-color !important;
   border-color: transparent !important;

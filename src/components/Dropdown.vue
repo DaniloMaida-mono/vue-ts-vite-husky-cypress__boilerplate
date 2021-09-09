@@ -47,9 +47,9 @@ export default defineComponent({
       type: String as PropType<Sizes>,
     },
   },
-  setup() {
-    const handleMenuClick = (e: Event) => {
-      console.log('click', e)
+  setup(props, { emit }) {
+    const handleMenuClick = (value: string) => {
+      emit('onChange', { value: value })
     }
     return {
       handleMenuClick,
