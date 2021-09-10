@@ -19,7 +19,7 @@ import { defineComponent, PropType } from 'vue'
 import { Moment } from 'moment'
 import CalendarIcon from './CalendarIcon.vue'
 
-enum Sizes {
+enum Size {
   small = 'small',
   default = 'default',
   large = 'large',
@@ -34,7 +34,7 @@ export default defineComponent({
     },
     size: {
       default: 'default',
-      type: String as PropType<Sizes>,
+      type: String as PropType<Size>,
     },
   },
   setup(props, { emit }) {

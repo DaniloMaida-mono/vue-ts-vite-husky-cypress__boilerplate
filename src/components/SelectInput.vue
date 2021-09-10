@@ -46,4 +46,8 @@ export default defineComponent({
 div.ant-space-item {
   width: 100%;
 }
+
+.ant-time-picker-panel-input::selection {
+  background: rgba(0, 0, 0, 0.3);
+}
 </style>

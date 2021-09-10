@@ -7,13 +7,13 @@
 <script lang="ts">
 import { defineComponent, PropType, ref } from 'vue'
 
-enum Sizes {
+enum Size {
   small = 'small',
   middle = 'default',
   large = 'large',
 }
 
-enum Types {
+enum Type {
   text = 'text',
   email = 'email',
 }
@@ -32,11 +32,11 @@ export default defineComponent({
     },
     type: {
       default: 'text',
-      type: String as PropType<Types>,
+      type: String as PropType<Type>,
     },
     size: {
       default: 'default',
-      type: String as PropType<Sizes>,
+      type: String as PropType<Size>,
     },
   },
   setup() {

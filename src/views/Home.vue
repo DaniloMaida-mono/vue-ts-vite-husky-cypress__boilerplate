@@ -26,6 +26,13 @@
 
     <Datepicker label="Scegli una data" @onChange="handleDateChange" />
     <Timepicker label="Scegli un orario" @onChange="handleTimeChange" />
+    <Checkbox
+      label="Attivo"
+      :items="[
+        { label: 'Lunedi', value: 1, active: true },
+        { label: 'Martedi', value: 2, active: false },
+      ]"
+    />
   </div>
 </template>
 
@@ -39,6 +46,7 @@ import TextInput from '@/components/TextInput.vue'
 import SelectInput from '@/components/SelectInput.vue'
 import Datepicker from '@/components/Datepicker.vue'
 import Timepicker from '@/components/Timepicker.vue'
+import Checkbox from '@/components/Checkbox.vue'
 
 export default defineComponent({
   name: 'Home',
@@ -51,6 +59,7 @@ export default defineComponent({
     SelectInput,
     Datepicker,
     Timepicker,
+    Checkbox,
   },
   setup() {
     const clickButton = (args: object) => {
